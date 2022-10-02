@@ -1,0 +1,16 @@
+.info-box {
+    float: left;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.imgbox{
+    width: 130px;
+    height: 40px;
+    background-color: #dedede;
+}
+ul.info-box li{
+    display: block;
+    list-style: none;
+    position: relative;
+}

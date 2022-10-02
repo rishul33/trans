@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!-- Mirrored from www.air7seas.com/credit-card.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Oct 2022 12:58:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Credit Card Processing - AIR 7 SEAS</title>
+<link rel="shortcut icon" href="source/images/a7s-icon.ico"/>
+<meta charset="utf-8"/>
+<meta name="description"
+      content="Air 7 seas is leading Freight Forwarder, NVOCC, OTI, Cargo Consolidator, Custom Broker, Carrier, and Shipping Agents for Ship Lines, Airlines, Truckers, Shipper & Consignee to handle International and Domestic transportation by Air Freight, Sea Freight or Road Freight.">
+<meta name="description"
+      content="Air 7 Seas Overseas Relocation, Air 7 Seas Moving Overseas, Air 7 Seas Relocation Services, Air 7 Seas Shipping India, Air 7 Seas Shipping USA, Air 7 Seas Freight Forwarder, Air 7 Seas Air Freight, Air 7 Seas Air Cargo, Air 7 Seas Customs Clearance, Air 7 Seas International Shipping Companies, Air 7 Seas Moving Estimate, Air 7 Seas Shipping Quote, Air 7 Seas Moving International, Air 7 Seas Domestic Movers, Air 7 Seas Shipping Agent, Air 7 Seas Shipping International, Air 7 Seas International Moving Service, Air 7 Seas Cargo Agent, Air 7 Seas Customs Broker, Air 7 Seas International Mover, Air 7 Seas Household Goods, Air 7 Seas Commercial Goods, Air 7 Seas Breakbulk Cargo, Air 7 Seas Car Shipping, Air 7 Seas Motorbike Shipping, Air 7 Seas Auto Vehicle Mechinery, Air 7 Seas Cargo Consolidation, Air 7 Seas Freight Service Provider">
+<meta name="keywords"
+      content="Overseas Relocation, Moving Overseas, Relocation Services, Shipping India, Shipping USA, Freight Forwarder, Air Freight, Air Cargo, Customs Clearance, International Shipping Companies, Moving Estimate, Shipping Quote, Moving International, Domestic Movers, Shipping Agent, Shipping International, International Moving Service, Cargo Agent, Customs Broker, International Mover, Household Goods, Commercial Goods, Breakbulk Cargo, Car Shipping, Motorbike Shipping, Auto Vehicle Mechinery, Cargo Consolidation, Freight Service Provider">
+<meta name="author" content="Air 7 Seas Transport Logistics Pvt Ltd">
+<!--  <base href="http://www.air7seas.com/"> -->
+
+
+<!--          MODAL POPUP          -->
+<script src="source/modal-popup/jquery-1.4.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="source/css/modal-popup.css"/>
+
+
+<link href="source/css/tel/intlTelInput.css" rel="stylesheet">
+
+<link href="source/css/sole.css" rel="stylesheet" type="text/css" visible="true"/>
+<link href="source/css/skin.css" rel="stylesheet" type="text/css" visible="true"/>
+<link href="source/css/controls.css" rel="stylesheet" type="text/css" visible="true"/>
+<script src="source/js/script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="source/css/jquery.datetimepicker.css"/>
+<script src="source/js/jquery-1.11.1.js"></script>
+<script src="source/js/jquery.validate.js"></script>
+<script src="source/js/jquery.maskMoney.js" type="text/javascript"></script>
+<script>
+    $().ready(function () {
+
+        $(function () {
+            $("#txtamount").maskMoney({allowNegative: true, thousands: '', decimal: '.'});
+        })
+
+
+        $("#frmCreditCard").validate({
+            rules: {
+                txtcustname: "required",
+                txtaddress: "required",
+                txtcity: "required",
+                state: "required",
+                zipcode: "required",
+                txtphone: "required",
+                txtemail: "required",
+                txtamount: "required",
+                txtcardno: "required",
+                txtcardname: "required",
+                ddlexdate: "required",
+                ddlexyear: "required",
+                txtcvv: "required",
+                captcha: "required"
+            },
+            messages: {
+                txtcustname: "",
+                txtaddress: "",
+                txtcity: "",
+                state: "",
+                zipcode: "",
+                txtphone: "",
+                txtemail: "",
+                txtamount: "",
+                txtcardno: "",
+                txtcardname: "",
+                ddlexdate: "",
+                ddlexyear: "",
+                txtcvv: "",
+                captcha: " "
+            }
+        });
+    });
+
+    function check_cc_no() {
+
+    }
+
+</script>
+
+<script>
+    /*(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54008281-2', 'auto');
+    ga('send', 'pageview');*/
+
+</script>
+
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #cc:hover {
+        text-decoration: underline;
+    }
+
+    #captcha.success {
+        border: 1px solid #49c24f;
+        background: #bcffbf;
+    }
+
+    #captcha.error {
+        border: 1px solid #c24949;
+        background: #ffbcbc;
+    }
+
+    #loader {
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        background-color: #ffffff;
+        z-index: 2147483647 !important;
+        opacity: 0.8;
+        overflow: hidden;
+        text-align: center;
+        top: 0;
+        left: 0;
+
+    }
+</style>
+
+<script>
+    function card_type_check(value) {
+        document.getElementById("visa").checked = true;
+        if (value == 'Master') {
+            document.getElementById("master").checked = true;
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    function cuountry_change() {
+        document.getElementById("txtamount").value = "";
+        document.getElementById("txtcardno").value = "";
+        document.getElementById("total").value = "Total";
+        document.getElementById("visa").checked = true;
+        var country1 = document.getElementById('country').value;
+        if (country1 == "US") {
+            document.getElementById("conv_amt").value = "3";
+            document.getElementById("visa").checked = true;
+        } else {
+            document.getElementById("conv_amt").value = "4";
+            document.getElementById("master").checked = true;
+        }
+    }
+
+    function card_change(card_t) {
+        if (card_t == 'Master') {
+            var cal = '';
+            var value1 = document.getElementById("txtamount").value;
+            var cal1 = parseFloat(((value1 * 4) / 100));
+            if (cal1 < 5) {
+                cal = 5 + parseFloat(value1);
+            } else {
+                cal = parseFloat(cal1) + parseFloat(value1);
+            }
+            document.getElementById("total").value = '$' + cal;
+
+            document.getElementById("conv_amt").value = "4";
+            document.getElementById("txtcardno").value = "";
+
+        } else {
+            document.getElementById("txtcardno").value = "";
+            if (document.getElementById("country").value == 'US') {
+                var cal = '';
+                var value1 = document.getElementById("txtamount").value;
+                var cal1 = parseFloat(((value1 * 3) / 100));
+                if (cal1 < 5) {
+                    cal = 5 + parseFloat(value1);
+                } else {
+                    cal = parseFloat(cal1) + parseFloat(value1);
+                }
+                document.getElementById("total").value = '$' + cal;
+
+                document.getElementById("conv_amt").value = "3";
+            } else {
+                var cal = '';
+                var value1 = document.getElementById("txtamount").value;
+                var cal1 = parseFloat(((value1 * 4) / 100));
+                if (cal1 < 5) {
+                    cal = 5 + parseFloat(value1);
+                } else {
+                    cal = parseFloat(cal1) + parseFloat(value1);
+                }
+                document.getElementById("total").value = '$' + cal;
+
+                document.getElementById("conv_amt").value = "4";
+            }
+
+        }
+    }
+
+    function payment_calc(value) {
+        //alert(value);
+        var entered_amt = value;
+        var country_n = document.getElementById("country").value;
+        var card_no = document.getElementById("txtcardno").value;
+        var f_let = card_no.substr(0, 1);
+        if (f_let == 5) {
+            document.getElementById("conv_amt").value = "4";
+            var cal = '';
+            var cal1 = parseFloat(((value * 4) / 100));
+            if (cal1 < 5) {
+                cal = 5 + parseFloat(value);
+            } else {
+                cal = parseFloat(cal1) + parseFloat(value);
+            }
+            document.getElementById("total").value = '$' + cal;
+        } else {
+            if (country_n == "US") {
+                document.getElementById("conv_amt").value = "3";
+                var cal = '';
+                var cal1 = parseFloat(((value * 3) / 100));
+                if (cal1 < 5) {
+                    cal = 5 + parseFloat(value);
+                } else {
+                    cal = parseFloat(cal1) + parseFloat(value);
+                }
+                document.getElementById("total").value = '$' + cal;
+            }
+            else {
+                document.getElementById("conv_amt").value = "4";
+                var cal = '';
+                var cal1 = parseFloat(((value * 4) / 100));
+                if (cal1 < 5) {
+                    cal = 5 + parseFloat(value);
+                } else {
+                    cal = parseFloat(cal1) + parseFloat(value);
+                }
+                document.getElementById("total").value = '$' + cal;
+            }
+        }
+    }
+
+    function check_card_type(C_NO) {
+        var cc_len = C_NO.length;
+        if (cc_len == 15 || cc_len == 16) {
+            document.getElementById('er_msg').style.display = "none";
+            var card_no1 = C_NO;
+            var amt = document.getElementById("txtamount").value;
+            var f_let = card_no1.substr(0, 1);
+            if (f_let == 4) {
+                document.getElementById("visa").checked = true;
+            } else if (f_let == 5) {
+                document.getElementById("master").checked = true;
+            }
+            payment_calc(amt);
+        } else {
+            document.getElementById('er_msg').style.display = "block";
+            document.getElementById("txtcardno").value = "";
+            document.getElementById('txtcardno').focus();
+        }
+    }
+
+    function change_captcha() {
+        document.getElementById('captcha_cv').src = "get_captcha4051.jpg?rnd=" + Math.random();
+    }
+</script>
+
+
+</head>
+<body>
+
+<div style="width: 100%; background-color: #ffffff; border-bottom: 1px solid #f4f4f4;" align="center">
+    <div style="width: 980px; height: 120px; background-color: #ffffff;">
+
+        <a href="index.html"><img src="source/images/logo-new.png"
+                                               style="float: left; top:35px; position: relative;"></a>
+
+        <div style=" float: right;">
+            <table border="0" style="margin-top: 20px;">
+                <tr>
+                    <td style="float: right;">
+                    </td>
+                    <td style="padding: 3px 0 0 15px; float: right;">
+                        <img src="source/images/phone-ico.png"
+                             style="margin-top: -2px; margin-left: -30px; width: 25px; position: absolute;">
+                        <span style="font-size: 13pt;">Call:
+                        <a href="tel:+14089578787" style="padding-left: 10px;"><b>(408) 957-8787<b/></a></span>
+                    </td>
+                </tr>
+                <tr style="vertical-align: middle;">
+                    <td style="padding-top: 10px; text-align: right; font-size: 7pt; line-height: 15px; " colspan="2">
+                        <span style="float: left;">This website can secure your private <br>information using a SSL Certificate</span>
+                        <span id="siteseal" style="margin-left: 10px; float: right"><script type="text/javascript"
+                                                                                            src="https://seal.godaddy.com/getSeal?sealID=OelJh0pjYiJrptoEDQxpWOwzaKHMEZAysSQ1g1n7YwjXkvrSOripwQXTxU3Q"></script></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%; height: 100%; background-color: #cccccc;" align="center">
+<form id="frmCreditCard" class="frmAS" action="https://www.air7seas.com/credit-card.php" method="post">
+<div style="width: 980px; height: auto; background-color: #f4f4f4; padding-top:20px;">
+
+<div class="col span_12_of_12"
+     style="width: 90%; position: relative; vertical-align: top; padding: 20px 20px 20px 40px; background-color: #ffffff; border: 1px solid #eeeeee"
+     align="left"><br>
+
+<div id="loader" style="display: none; margin-top: 20px;">
+    <img src="source/images/gif-loader.gif" style="margin-top: 20%;">
+</div>
+
+<div id="frmDisplay">
+
+<h1 style="font-size: 18pt; font-family: 'open sans'; color: #026799; margin-bottom: 20px; font-weight: 700;">
+    Credit Card Processing - AIR 7 SEAS</h1>
+
+<table style="width: 100%;">
+    <tr>
+        <td style="width: 70%;">
+            <h2 style="font-size: 12pt; font-family: 'open sans'; color: #026799; margin-bottom: 10px; font-weight: 600; margin-top: 20px;">
+                Payment Information</h2>
+        </td>
+        <td style="width: 30%; padding-right: 20px;" align="right">
+        </td>
+    </tr>
+</table>
+<hr style="border: 0px; border-bottom:1px solid #dedede;">
+<table border="0" style="padding-top: 15px; padding-left: 30px;">
+    <tr>
+        <td style="width: 170px;" class="form-label">A7S Ref # / Invoice # *</label></td>
+        <td class="form-label">:&nbsp; <input type="text" id="txtinvoice" name="txtinvoice" class="form-textbox"
+                                              required value="">
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">A7S Rep name *</td>
+        <td class="form-label">:&nbsp; <input type="text" id="txtrepname" name="txtrepname" class="form-textbox"
+                                              required value="">
+        </td>
+    </tr>
+</table>
+<h2 style="font-size: 12pt; font-family: 'open sans'; color: #026799; margin-bottom: 10px; font-weight: 600; margin-top: 20px;">
+    Credit Card Information</h2>
+<hr style="border: 0px; border-bottom:1px solid #dedede;">
+<table border="0" style="padding-top: 15px; padding-left: 30px;">
+    <tr>
+        <td class="form-label" style="width: 170px;">Card Type *</td>
+        <td style="vertical-align: middle;" class="form-label">&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="visa" name="card_type" Checked value="Visa"
+                   style="position: absolute; margin-top: 7px;" onclick="card_change(this.value)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                src="source/images/ico_visa.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="master" name="card_type"  value="Master"
+                   style="position: absolute; margin-top: 7px;" onclick="card_change(this.value)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                src="source/images/ico_mc.jpg" alt="">
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">Amount (USD) *</td>
+        <td class="form-label">:&nbsp;
+            <input type="text" id="txtamount" name="txtamount" class="form-textbox" value=""
+                   style="width: 80px;"
+                   onchange="payment_calc(this.value)" required><span <span
+                style="font-size: 11pt; position: absolute; padding-top: 5px; padding-left: 3px; font-weight: bold">+
+                (<span id=""><input id="conv_amt" name="conv_amt" value="3" readonly
+                                    tabindex="-1"
+                                    style="width: 10px; font-size: 11pt; font-weight: 700;border: 0px;"></span>%) Conv fee =
+                <span style="color: #000000"><input id="total" name="total" value="Total"
+                                                    style="border: 0px; font-size: 11pt; font-weight: 700;" readonly
+                                                    tabindex="-1"></span></span>
+        </td>
+    </tr>
+    <!--<tr>
+        <td></td>
+        <td style="font-size: 8pt; color: red; vertical-align: top; padding-left: 15px">{Add 3% (4% Intl and master),
+            Minim $10 to
+            the amount}
+        </td>
+    </tr>-->
+    <tr>
+        <td class="form-label">Card Number *</td>
+        <td class="form-label">:&nbsp;
+            <input type="text" id="txtcardno" name="txtcardno" onchange="check_card_type(this.value)"
+                   class="form-textbox" required value="">
+            <span id="er_msg"
+                  style="color: red; position: absolute; margin-top: -25px; margin-left: 230px; display: none; ">Please Enter Correct Credit Card No</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">Name on the Card *</td>
+        <td class="form-label">:&nbsp;&nbsp;<input type="text" id="txtcardname" name="txtcardname" class="form-textbox"
+                                                   required value="">
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">Expiration Date *</td>
+        <td class="form-label">:&nbsp;
+            <select id="ddlexdate" name="ddlexdate" class="form-textbox" style="width: 50px;" required>
+                                        <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                </select>
+
+            <select id="ddlexyear" name="ddlexyear" class="form-textbox" style="width: 70px; margin-left: 5px;"
+                    required>
+                                        <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                            <option value="2035">2035</option>
+                                </select>
+
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">CVV2 Code *</td>
+        <td class="form-label">:&nbsp;&nbsp;<input type="text" id="txtcvv" name="txtcvv" class="form-textbox"
+                                                   style="width: 80px;" required value="">
+            <a id="cc" href="ccpopup.html" target="_blank"
+               onclick="window.open(this.href, this.target, 'width=300,height=320,top=50,left=50'); return false;"
+               style="margin-left: 20px; margin-top: 5px; font-weight: bold; color: #00A21B; position: absolute">What is
+                this<img src="source/images/ccicon.png" alt=""
+                         style="width: 24px; margin-left: 10px; top:-3px; position: absolute "></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">Are You ?</td>
+        <td class="form-label">:&nbsp;
+            <select name="customer_type" id="customer_type" class="form-textbox">
+                <option selected>Choose One</option>
+                                        <option value="Shipper">Shipper</option>
+                                            <option value="Receiver">Receiver</option>
+                                            <option value="Third Party">Third Party</option>
+                                </select>
+        </td>
+
+    </tr>
+
+</table>
+<h2 style="font-size: 12pt; font-family: 'open sans'; color: #026799; margin-bottom: 10px; font-weight: 600; margin-top: 20px;">
+    Billing Information</h2>
+<hr style="border: 0px; border-bottom:1px solid #dedede;">
+<table border="0" style="padding-top: 15px; padding-left: 30px;">
+<tr>
+    <td class="form-label" style="width: 170px;">Name *</td>
+    <td class="form-label">:&nbsp; <input type="text" id="txtcustname" name="txtcustname" class="form-textbox"
+                                          value="" required>
+
+    </td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td class="form-label">Address *</td>
+    <td class="form-label">:&nbsp; <input type="text" id="txtaddress" name="txtaddress" class="form-textbox"
+                                          value="" required>
+    </td>
+</tr>
+<tr>
+    <td class="form-label">City *</td>
+    <td class="form-label">:&nbsp;
+        <input type="text" id="txtcity" name="txtcity" class="form-textbox" value="" required>
+    </td>
+</tr>
+<tr>
+    <td class="form-label">Country *</td>
+    <td class="form-label">:&nbsp;
+        <select id="country" name="country" style="width: 208px;" class="form-textbox" onchange="cuountry_change()">
+
+            <option>Select Country</option>
+                                <option value="Afghanistan">
+                        Afghanistan                    </option>
+                                    <option value="Alaska">
+                        Alaska                    </option>
+                                    <option value="Albania">
+                        Albania                    </option>
+                                    <option value="Algeria">
+                        Algeria                    </option>
+                                    <option value="Angola">
+                        Angola                    </option>
+                                    <option value="Antigua">
+                        Antigua                    </option>
+                                    <option value="Argentina">
+                        Argentina                    </option>
+                                    <option value="Aruba">
+                        Aruba                    </option>
+                                    <option value="Australia">
+                        Australia                    </option>
+                                    <option value="Austria">
+                        Austria                    </option>
+                                    <option value="Bahamas">
+                        Bahamas                    </option>
+                                    <option value="Bahrain">
+                        Bahrain                    </option>
+                                    <option value="Bangladesh">
+                        Bangladesh                    </option>
+                                    <option value="Barbados">
+                        Barbados                    </option>
+                                    <option value="Belgium">
+                        Belgium                    </option>
+                                    <option value="Belize">
+                        Belize                    </option>
+                                    <option value="Benin">
+                        Benin                    </option>
+                                    <option value="Brazil">
+                        Brazil                    </option>
+                                    <option value="Brunei">
+                        Brunei                    </option>
+                                    <option value="Bulgaria">
+                        Bulgaria                    </option>
+                                    <option value="Cambodia">
+                        Cambodia                    </option>
+                                    <option value="Cameroon">
+                        Cameroon                    </option>
+                                    <option value="Canada">
+                        Canada                    </option>
+                                    <option value="Canary Islands">
+                        Canary Islands                    </option>
+                                    <option value="Caroline">
+                        Caroline                    </option>
+                                    <option value="Chile">
+                        Chile                    </option>
+                                    <option value="China">
+                        China                    </option>
+                                    <option value="Columbia">
+                        Columbia                    </option>
+                                    <option value="Comoros Islands">
+                        Comoros Islands                    </option>
+                                    <option value="Congo">
+                        Congo                    </option>
+                                    <option value="Croatia">
+                        Croatia                    </option>
+                                    <option value="Cuba">
+                        Cuba                    </option>
+                                    <option value="Cyprus">
+                        Cyprus                    </option>
+                                    <option value="Czechoslovakia">
+                        Czechoslovakia                    </option>
+                                    <option value="Denmark">
+                        Denmark                    </option>
+                                    <option value="Djibouti">
+                        Djibouti                    </option>
+                                    <option value="Dominica">
+                        Dominica                    </option>
+                                    <option value="Dominican Republic">
+                        Dominican Republic                    </option>
+                                    <option value="Ecuador">
+                        Ecuador                    </option>
+                                    <option value="Egypt">
+                        Egypt                    </option>
+                                    <option value="El Salvador">
+                        El Salvador                    </option>
+                                    <option value="Estonia">
+                        Estonia                    </option>
+                                    <option value="Ethiopia">
+                        Ethiopia                    </option>
+                                    <option value="Fiji">
+                        Fiji                    </option>
+                                    <option value="Finland">
+                        Finland                    </option>
+                                    <option value="France">
+                        France                    </option>
+                                    <option value="Gabon">
+                        Gabon                    </option>
+                                    <option value="Gambia">
+                        Gambia                    </option>
+                                    <option value="Germany">
+                        Germany                    </option>
+                                    <option value="Ghana">
+                        Ghana                    </option>
+                                    <option value="Gilbert">
+                        Gilbert                    </option>
+                                    <option value="Grand Cayman">
+                        Grand Cayman                    </option>
+                                    <option value="Greece">
+                        Greece                    </option>
+                                    <option value="Grenada">
+                        Grenada                    </option>
+                                    <option value="Guam">
+                        Guam                    </option>
+                                    <option value="Guatemala">
+                        Guatemala                    </option>
+                                    <option value="Guinea">
+                        Guinea                    </option>
+                                    <option value="Guyana">
+                        Guyana                    </option>
+                                    <option value="Haiti">
+                        Haiti                    </option>
+                                    <option value="Hawaii">
+                        Hawaii                    </option>
+                                    <option value="Honduras">
+                        Honduras                    </option>
+                                    <option value="Hungary">
+                        Hungary                    </option>
+                                    <option value="Iceland">
+                        Iceland                    </option>
+                                    <option value="India">
+                        India                    </option>
+                                    <option value="Indonesia">
+                        Indonesia                    </option>
+                                    <option value="Iran">
+                        Iran                    </option>
+                                    <option value="Iraq">
+                        Iraq                    </option>
+                                    <option value="Ireland">
+                        Ireland                    </option>
+                                    <option value="Israel">
+                        Israel                    </option>
+                                    <option value="Italy">
+                        Italy                    </option>
+                                    <option value="Ivory Coast">
+                        Ivory Coast                    </option>
+                                    <option value="Jamaica">
+                        Jamaica                    </option>
+                                    <option value="Japan">
+                        Japan                    </option>
+                                    <option value="Jordan">
+                        Jordan                    </option>
+                                    <option value="Kenya">
+                        Kenya                    </option>
+                                    <option value="Kuwait">
+                        Kuwait                    </option>
+                                    <option value="Latvia">
+                        Latvia                    </option>
+                                    <option value="Lebanon">
+                        Lebanon                    </option>
+                                    <option value="Liberia">
+                        Liberia                    </option>
+                                    <option value="Libya">
+                        Libya                    </option>
+                                    <option value="Macau">
+                        Macau                    </option>
+                                    <option value="Madagascar">
+                        Madagascar                    </option>
+                                    <option value="Malagasy">
+                        Malagasy                    </option>
+                                    <option value="Malawi">
+                        Malawi                    </option>
+                                    <option value="Malaysia">
+                        Malaysia                    </option>
+                                    <option value="Maldives">
+                        Maldives                    </option>
+                                    <option value="Malta">
+                        Malta                    </option>
+                                    <option value="Mariana">
+                        Mariana                    </option>
+                                    <option value="Marshall">
+                        Marshall                    </option>
+                                    <option value="Martinique">
+                        Martinique                    </option>
+                                    <option value="Mauritania">
+                        Mauritania                    </option>
+                                    <option value="Mauritius">
+                        Mauritius                    </option>
+                                    <option value="Mexico">
+                        Mexico                    </option>
+                                    <option value="Micronesia">
+                        Micronesia                    </option>
+                                    <option value="Montserrat">
+                        Montserrat                    </option>
+                                    <option value="Morocco">
+                        Morocco                    </option>
+                                    <option value="Mozambique">
+                        Mozambique                    </option>
+                                    <option value="Myanmar">
+                        Myanmar                    </option>
+                                    <option value="Namibia">
+                        Namibia                    </option>
+                                    <option value="Netherlands">
+                        Netherlands                    </option>
+                                    <option value="Netherlands Antilles">
+                        Netherlands Antilles                    </option>
+                                    <option value="New Caledonia">
+                        New Caledonia                    </option>
+                                    <option value="New Herbrides">
+                        New Herbrides                    </option>
+                                    <option value="New Zealand">
+                        New Zealand                    </option>
+                                    <option value="Nicaragua">
+                        Nicaragua                    </option>
+                                    <option value="Nigeria">
+                        Nigeria                    </option>
+                                    <option value="Norway">
+                        Norway                    </option>
+                                    <option value="Oman">
+                        Oman                    </option>
+                                    <option value="Pakistan">
+                        Pakistan                    </option>
+                                    <option value="Panama">
+                        Panama                    </option>
+                                    <option value="Papua New Gunea">
+                        Papua New Gunea                    </option>
+                                    <option value="Peru">
+                        Peru                    </option>
+                                    <option value="Philippines">
+                        Philippines                    </option>
+                                    <option value="Poland">
+                        Poland                    </option>
+                                    <option value="Portugal">
+                        Portugal                    </option>
+                                    <option value="Puerto Rico">
+                        Puerto Rico                    </option>
+                                    <option value="Qatar">
+                        Qatar                    </option>
+                                    <option value="Reunion Islands">
+                        Reunion Islands                    </option>
+                                    <option value="Romania">
+                        Romania                    </option>
+                                    <option value="Russia">
+                        Russia                    </option>
+                                    <option value="Saudi Arabia">
+                        Saudi Arabia                    </option>
+                                    <option value="Scotland">
+                        Scotland                    </option>
+                                    <option value="Senegal">
+                        Senegal                    </option>
+                                    <option value="Seychelles">
+                        Seychelles                    </option>
+                                    <option value="Sierra Leone">
+                        Sierra Leone                    </option>
+                                    <option value="Singapore">
+                        Singapore                    </option>
+                                    <option value="Solomon Islands">
+                        Solomon Islands                    </option>
+                                    <option value="Somalia">
+                        Somalia                    </option>
+                                    <option value="South Africa">
+                        South Africa                    </option>
+                                    <option value="South Korea">
+                        South Korea                    </option>
+                                    <option value="Spain">
+                        Spain                    </option>
+                                    <option value="Sri Lanka">
+                        Sri Lanka                    </option>
+                                    <option value="St. Kitts">
+                        St. Kitts                    </option>
+                                    <option value="St. Maarten">
+                        St. Maarten                    </option>
+                                    <option value="St. Vincent">
+                        St. Vincent                    </option>
+                                    <option value="Sudan">
+                        Sudan                    </option>
+                                    <option value="Surinam">
+                        Surinam                    </option>
+                                    <option value="Sweden">
+                        Sweden                    </option>
+                                    <option value="Switzerland">
+                        Switzerland                    </option>
+                                    <option value="Syria">
+                        Syria                    </option>
+                                    <option value="Tahiti">
+                        Tahiti                    </option>
+                                    <option value="Taiwan">
+                        Taiwan                    </option>
+                                    <option value="Tanzania">
+                        Tanzania                    </option>
+                                    <option value="Thailand">
+                        Thailand                    </option>
+                                    <option value="Togo">
+                        Togo                    </option>
+                                    <option value="Tonga">
+                        Tonga                    </option>
+                                    <option value="Trinidad">
+                        Trinidad                    </option>
+                                    <option value="Tunisia">
+                        Tunisia                    </option>
+                                    <option value="Turkey">
+                        Turkey                    </option>
+                                    <option value="Tuvalu">
+                        Tuvalu                    </option>
+                                    <option value="UAE">
+                        UAE                    </option>
+                                    <option value="Uganda">
+                        Uganda                    </option>
+                                    <option value="UK">
+                        UK                    </option>
+                                    <option value="Ukraine">
+                        Ukraine                    </option>
+                                    <option value="Uruguay">
+                        Uruguay                    </option>
+                                    <option value="US" selected>
+                        US                    </option>
+                                    <option value="Venezuela">
+                        Venezuela                    </option>
+                                    <option value="Vietnam">
+                        Vietnam                    </option>
+                                    <option value="Western Samoa">
+                        Western Samoa                    </option>
+                                    <option value="Yemen">
+                        Yemen                    </option>
+                                    <option value="Yugoslavia">
+                        Yugoslavia                    </option>
+                                    <option value="Zaire">
+                        Zaire                    </option>
+                                    <option value="Zambia">
+                        Zambia                    </option>
+                                    <option value="Zimbabwe">
+                        Zimbabwe                    </option>
+                
+        </select>
+
+    </td>
+</tr>
+<tr>
+    <td class="form-label">State/Province *</td>
+    <td class="form-label">:&nbsp;
+        <select name="state" id="state" class="form-textbox" style="width: 208px;"
+                onchange="checkFieldBack(this);" required>
+            <option value="">Please Select</option>
+            <optgroup label="Australian Provinces">
+                <option value="New South Wales">New South Wales</option>
+                <option value="Queensland">Queensland</option>
+                <option value="South Australia">South Australia</option>
+                <option value="Tasmania">Tasmania</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Western Australia">Western Australia</option>
+                <option value="Australian Capital Territory">Australian Capital Territory</option>
+                <option value="Northern Territory">Northern Territory</option>
+            </optgroup>
+            <optgroup label="Canadian Provinces">
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Newfoundland">Newfoundland</option>
+                <option value="Northwest Territories">Northwest Territories</option>
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="Nunavut">Nunavut</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Yukon">Yukon</option>
+            </optgroup>
+            <optgroup label="US States">
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="British Virgin Islands">British Virgin Islands</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Guam">Guam</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Mariana Islands">Mariana Islands</option>
+                <option value="Mariana Islands (Pacific)">Mariana Islands (Pacific)</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="VI U.S. Virgin Islands">VI U.S. Virgin Islands</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="Washington, D.C.">Washington, D.C.</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyomings">Wyoming</option>
+            </optgroup>
+            <option value="N/A">Other</option>
+        </select>
+
+    </td>
+</tr>
+<tr>
+    <td class="form-label">ZIP Code *</td>
+    <td class="form-label">:&nbsp; <input type="text" id="zipcode" name="zipcode"
+                                          class="form-textbox"
+                                          style="width: 60px;"
+                                          required value="">
+    </td>
+</tr>
+<tr>
+    <td class="form-label">Phone # / Cell # *</td>
+    <td class="form-label">:&nbsp; <input type="text" style="margin-left: 5px; width: 208px;" id="txtphone"
+                                          name="txtphone" class="form-textbox" required>
+        <input type="hidden" id="mob_no" name="mob_no">
+    </td>
+</tr>
+<tr>
+    <td class="form-label">E-mail *</td>
+    <td class="form-label">:&nbsp; <input type="email" id="txtemail" name="txtemail"
+                                          class="form-textbox" value="" required>
+    </td>
+</tr>
+<tr>
+    <td></td>
+    <td style="color: #016491; padding-bottom: 10px; padding-top: 10px; font-style: italic; padding-left: 15px;">
+        Subject to the <a href="terms-and-conditions.html" class="resource-link">terms &amp;
+            conditions</a> as agreed
+        at the time of placing the order on Air 7Seas.<br>
+        <span style="color: red;">Note: This charge will appear as Air7Seas/Amerex on your card statement.</span>
+
+    </td>
+</tr>
+<tr>
+    <td colspan="2" style="height: 7px;"></td>
+</tr>
+<tr>
+    <td class="form-label" style="position: absolute; margin-top: 5px;">Security Code<span
+            style="margin-left: 90px;">:</span></td>
+    <td class="form-label">
+        <input type="text" maxlength="6" name="captcha" class="form-textbox" autocomplete="off" id="captcha"
+               style="width: 100px; position: absolute; margin-left: 15px;">
+        <img src="get_captcha.jpg" alt="" id="captcha_cv" style="border: 1px solid #c6c6c6; margin-left: 130px;"/>
+        <img src="source/images/refresh.png" alt="" id="refreshimg" name="refreshimg"
+             style="cursor: pointer;"
+             title="Click to refresh image" onclick="change_captcha()"><br>
+        <span id="codeInfo_cv"></span>
+    </td>
+</tr>
+<tr>
+    <td><!--<a id="test" style="cursor: pointer;">Test</a>--></td>
+    <td>
+        <input type="submit" id="con_mail" name="con_mail" class="naviBlue" value="Review"
+               style="width: 150px; margin-left: 15px; margin-top: 10px; font-size: 12pt; font-family: 'open sans'; font-weight: 600;">&nbsp;
+    </td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</form>
+</div>
+<script src="source/js/tel/intlTelInput.js"></script>
+<script src="source/js/tel/utils.js"></script>
+<script>
+    /*$("#phone").intlTelInput({
+     nationalMode: true,
+     utilsScript: "source/js/tel/utils.js"
+     });*/
+
+    var input = $("#txtphone"),
+        output = $("#output");
+
+    input.intlTelInput({
+        nationalMode: true,
+        utilsScript: "../../lib/libphonenumber/build/utils.js" // just for formatting/placeholders etc
+    });
+
+    input.keyup(function () {
+        var intlNumber = input.intlTelInput("getNumber");
+        if (intlNumber) {
+            //output.text("International: " + intlNumber);
+            document.getElementById('mob_no').value = intlNumber;
+        } else {
+            output.text("Please enter a number below");
+        }
+    });
+
+</script>
+</body>
+
+<!-- Mirrored from www.air7seas.com/credit-card.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Oct 2022 12:58:13 GMT -->
+</html>

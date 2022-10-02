@@ -1,0 +1,172 @@
+﻿/* Tab Content - menucool.com */
+ul.tabs
+{
+    padding: 14px 0 8px;
+    margin:0;
+    font-size: 0;
+    list-style-type: none;
+    text-align: center; /*set to left, center, or right to align the tabs as desired*/
+    background: #DDDDE3;
+    border:1px solid #CCC;
+    border-bottom:none;
+    border-radius: 2px 2px 0 0;
+}
+        
+ul.tabs li
+{
+    display: inline;
+    margin: 0;
+    margin-right: 2px;/*distance between tabs*/
+    font: normal 12px Verdana;
+}
+        
+ul.tabs li a
+{
+    text-decoration: none;
+    position: relative;
+    padding: 8px 22px;
+    color: #000;
+    border-radius: 3px 3px 0 0;
+    outline:none;
+}
+  
+        
+ul.tabs li a:hover
+{
+    text-decoration: underline;
+    color: #000;
+}
+        
+ul.tabs li.selected a
+{
+    position: relative;
+    top: 0px;
+    font-weight:bold;
+    background: #FFF;
+    border: 1px solid #AAA;
+    border-bottom: 1px solid #FFF;
+    color: #000;
+}
+        
+        
+ul.tabs li.selected a:hover, ul.tabs li.selected a:hover
+{
+    text-decoration: none;
+}
+
+div.tabcontents
+{
+    border: 1px solid #CCC; padding: 10px;
+    border-top-color:#AAA;
+    background-color:#FFF;
+    border-radius: 0 0 2px 2px;
+}
+
+
+
+
+#ttabs {
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    height: 100px;
+    -moz-border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 4px;
+    background: #FFF;
+}
+.ttabs-content {
+    bottom: 0;
+    display: none;
+    top: 35px;
+    overflow: hidden;
+    padding: 25px;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+}
+.ttabs {
+    background: #e1e1e1;
+    background: -moz-linear-gradient(center top , #f2f2f2, #e1e1e1);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e1e1e1));
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 1px 0 #FFF inset;
+    -moz-border-radius: 4px 4px 0 0;
+    -moz-box-shadow: 0 1px 0 #FFF inset;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: 0 1px 0 #FFF inset;
+}
+.ttabs a {
+    border-left: solid 1px rgba(0,0,0,0.05);
+    border-right: solid 1px rgba(255,255,255,0.7);
+    color: #999;
+    display: block;
+    float: left;
+    font: 15px/35px Arial, Helvetica, Sans-serif;
+    overflow: hidden;
+    padding: 0 20px 0 40px;
+    position: relative;
+    text-shadow: 0 1px 0 #FFF;
+}
+#ttab1 {
+    border-left-width: 0;
+}
+#ttab2 {
+    border-right-width: 0;
+}
+.ttabs a:after {
+    background: #000;
+    background: #bdbdbd;
+    background: -moz-linear-gradient(center top , #d4d4d4, #bdbdbd);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4d4d4), color-stop(100%,#bdbdbd));
+    border-radius: 21px;
+    box-shadow: 0 1px 0 0 #FFF, 0 1px 0 0 rgba(0,0,0,0.25) inset;
+    color: #fff;
+    content: '✔';
+    font-size: 10px;
+    font-size: 12px;
+    left: 10px;
+    line-height: 21px;
+    margin: 7px 10px 5px 0;
+    -moz-border-radius: 21px;
+    -moz-box-shadow: 0 1px 0 0 #FFF, 0 1px 0 0 rgba(0,0,0,0.25) inset;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 1px 0 #999;
+    top: 0;
+    -webkit-border-radius: 21px;
+    -webkit-box-shadow: 0 1px 0 0 #FFF, 0 1px 0 0 rgba(0,0,0,0.25) inset;
+    width: 21px;
+}
+#ttab1:after {
+    content: '1';
+}
+#ttab2:after {
+    content: '2';
+}
+#ttab3:after {
+    content: '3';
+}
+#ttab4:after {
+    content: '4';
+}
+#ttab4 {
+    border-right-width: 0;
+}
+.ttabs a:target {
+    background: #FFF;
+    border-left-color: #CCC;
+}
+.ttabs a:target:after {
+    background: #038bd5;
+    background: -moz-linear-gradient(center top , #2dc3fc, #038bd5);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2dc3fc), color-stop(100%,#038bd5));
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.45), 0 1px 0 0 rgba(0, 0, 0, 0.25) inset, 0 0 5px 0 rgba(0,148,255,0.85);
+    -moz-box-shadow: 0 1px 0 0 rgba(255,255,255,0.45), 0 1px 0 0 rgba(0, 0, 0, 0.25) inset, 0 0 5px 0 rgba(0,148,255,0.85);
+    text-shadow: 0 1px 0 #096c9e;
+    -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,0.45), 0 1px 0 0 rgba(0, 0, 0, 0.25) inset, 0 0 5px 0 rgba(0,148,255,0.85);
+}
+.ttabs a:target+section.ttabs-content {
+    display: block;
+}

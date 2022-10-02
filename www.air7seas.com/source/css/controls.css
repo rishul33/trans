@@ -1,0 +1,372 @@
+
+/*--------------------   Form Validation CSS -----------------------------*/
+.frmAS label.error, label.error {
+    /* remove the next line when you have trouble in IE6 with labels in list */
+    font-family: arial;
+    font-size: 10pt;
+    font-style: italic;
+    font-weight:normal;
+    color: #000000;
+}
+div.error { display: none; }
+input {        border: 1px solid #bbbbbb; }
+input.checkbox { border: none }
+input:focus { border: 1px solid #bbbbbb; }
+input.error { border: 1px solid red; color: #000000;  font-weight:normal;}
+
+
+textarea {        border: 1px solid #bbbbbb; }
+textarea:focus { border: 1px solid #bbbbbb; }
+textarea.error { border: 1px solid red; color: #000000;  font-weight:normal;}
+
+select {        border: 1px solid #bbbbbb; }
+select:focus { border: 1px solid #bbbbbb; }
+select.error { border: 1px solid red; color: #000000;  font-weight:normal;}
+
+.frmAS .gray * { color: gray; }
+
+
+/**** FORM STYLING ****/
+.frm label {
+    float: left;
+    width: 140px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666666;
+    padding: 0px 5px 0 0;
+    padding-top: 5px;
+    margin-top: 0px;
+}
+
+.frm .long-field {
+    float: left;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 230px;
+    height: 20px;
+    padding-left: 5px;
+    border: 1px solid #cccccc;
+    background-color: #F8F8F8;
+    margin-bottom: 8px;
+}
+
+.frm .long-field:hover {
+    border: 1px solid #CCC;
+}
+
+.frm .long-field:focus {
+    border: 1px solid #6B1289;
+}
+
+.frm .small-field {
+    float: left;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 250px;
+    height: 25px;
+    padding-left: 5px;
+    border: 1px solid #cccccc;
+    background-color: #F8F8F8;
+    margin-bottom: 7px;
+
+}
+
+.frm .small-field:hover {
+    border: 1px solid #CCC;
+}
+
+.frm .small-field:focus {
+    border: 1px solid #6B1289;
+}
+
+.frm .lft-field {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+.frm .paypal {
+    margin-top: 6px;
+}
+
+.frm .submit-btn {
+    margin: 0 auto;
+    width: 119px;
+    margin-top: 15px;
+}
+
+/******* HINT STYLING ********/
+.hint {
+    width: 450px;
+    height: 300px;
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.hint p {
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    padding: 3px 0 0 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/*************************************** Popup *************************************************/
+a.info {
+    position: relative;
+    z-index: 24;
+    background-color: #ddd;
+    color: #000;
+    text-decoration: none
+}
+
+a.info:hover {
+    z-index: 25;
+    background-color: #ff0
+}
+
+a.info span {
+    display: none;
+
+}
+
+a.info:hover span {
+    padding: 10px;
+    width: 260px;
+    display: block;
+    position: absolute;
+    top: -285px;
+    left: -0px;
+    border: 1px solid #aeaeae;
+    background-color: #fafafa;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.66);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.66);
+    box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.66);
+
+}
+
+.redButton {
+    color: rgb(230, 230, 230);
+    font-size: 18px;
+    padding: 8px 20px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0px;
+    background: rgb(210, 20, 20);
+    background: -moz-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 100%);
+    background: -o-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 100%);
+    background: -ms-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 100%);
+    background: linear-gradient(0deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 100%);
+    -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+    cursor: pointer;
+}
+
+/* Green Button */
+.greenButton {
+    display: inline-block;
+    background: #f5513c;
+    -webkit-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    -moz-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 2px #e6e6e6;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-transition: all 0s 0;
+    -moz-transition: all 0s 0;
+    -o-transition: all 0s 0;
+    transition: all 0s 0;
+
+    padding: 10px 30px;
+    border-color: #ec513c;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'open sans' Arial, Helvetica, Sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.greenButton:hover {
+    background: #ff6551;
+    -webkit-box-shadow: 0px 0px 0px 4px #ffbfab;
+    -moz-box-shadow: 0px 0px 0px 4px #ffbfab;
+    box-shadow: 0px 0px 0px 2px #ffbfab;
+    border-color: #ed5e4b;
+    cursor: pointer;
+}
+
+.greenButton:active {
+}
+
+/* Blue Button */
+.blueButton {
+    display: inline-block;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #599Bdc), color-stop(100%, #3072B3));
+    background: -moz-linear-gradient(center top, #599Bdc 0%, #3072B3 100%);
+    -webkit-box-shadow: 0px 1px 0px 0px #7dc0ff inset, 0px -1px 0px 0px #1a3d5e inset, 0px 2px 2px 0px #d4d4d4;
+    -moz-box-shadow: 0px 1px 0px 0px #7dc0ff inset, 0px -1px 0px 0px #1a3d5e inset, 0px 2px 2px 0px #d4d4d4;
+    box-shadow: 0px 1px 0px 0px #7dc0ff inset, 0px -1px 0px 0px #1a3d5e inset, 0px 2px 2px 0px #d4d4d4;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0px 1px 0px #424242;
+    padding: 10px 20px;
+    display: block;
+    border-color: #295c8c;
+    border-width: 0px;
+    border-style: solid;
+    font-family: Lucida Grande;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.blueButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82bbf0), color-stop(100%, #3072B3));
+    background: -moz-linear-gradient(center top, #82bbf0 0%, #3072B3 100%);
+    cursor: pointer;
+}
+
+.blueButton:active {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #143a5e), color-stop(100%, #5ea3e0));
+    background: -moz-linear-gradient(center top, #143a5e 20%, #5ea3e0 100%);
+    -webkit-box-shadow: 0px 1px 0px 0px #54799c inset;
+    -moz-box-shadow: 0px 1px 0px 0px #54799c inset;
+    box-shadow: 0px 1px 0px 0px #54799c inset;
+}
+
+.whiteButton {
+    display: inline-block;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e8e9ea));
+    background: -moz-linear-gradient(center top, #ffffff 0%, #e8e9ea 100%);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow: 1px 1px 0px #ffffff;
+    padding: 7px 8px;
+    display: block;
+    border-color: #c9cdd1;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 12px;
+    line-height: 12px;
+    color: #455868;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.whiteButton:hover {
+    -webkit-box-shadow: 0px 0px 3px 1px #c9cdd1;
+    -moz-box-shadow: 0px 0px 3px 1px #c9cdd1;
+    box-shadow: 0px 0px 3px 1px #c9cdd1;
+}
+
+.whiteButton:active {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e9ea), color-stop(100%, #ffffff));
+    background: -moz-linear-gradient(center top, #e8e9ea 0%, #ffffff 100%);
+    -webkit-box-shadow: 0px 0px 3px 1px #c9cdd1;
+    -moz-box-shadow: 0px 0px 3px 1px #c9cdd1;
+    box-shadow: 0px 0px 3px 1px #c9cdd1;
+}
+
+.form-textbox {
+    background: transparent url(../images/textbox-shadow.png) repeat-x;
+    border: 1px solid #bbbbbb;
+    outline: 0;
+    height: 23px;
+    width: 200px;
+    margin: 3px 5px;
+    padding: 0px 3px;
+
+}
+.form-label{
+     font-weight: bold;
+     color: #555555;
+ }
+.form-lbl-mandatory{
+    font-weight: bold;
+    color: red;
+}
+/* Dark Yellow Button */
+
+
+
+.darkYellow{
+    display: inline-block;
+    background: #fa3;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fa3), color-stop(100%,#d93));
+    background: -moz-linear-gradient(center top, #fa3 0%, #d93 100%);
+    -webkit-box-shadow: 0px 1px 0px 0px #fc7 inset, 0px 1px 2px 0px #ccc;
+    -moz-box-shadow: 0px 1px 0px 0px #fc7 inset, 0px 1px 2px 0px #ccc;
+    box-shadow: 0px 1px 0px 0px #fc7 inset, 0px 1px 2px 0px #ccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow: 0px 1px 1px #fc6;
+    padding: 5px 20px;
+    border-color: #b82;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'open sans' Arial;
+    font-size: 16px;
+    color: #fff;
+
+}
+.darkYellow:hover {
+    background: #fb5;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb5), color-stop(100%,#d93));
+    background: -moz-linear-gradient(center top, #fb5 0%, #d93 100%);
+    -webkit-box-shadow: 0px 1px 0px 0px #fd9 inset, 0px 1px 2px 0px #ccc;
+    -moz-box-shadow: 0px 1px 0px 0px #fd9 inset, 0px 1px 2px 0px #ccc;
+    box-shadow: 0px 1px 0px 0px #fd9 inset, 0px 1px 2px 0px #ccc;
+}
+.darkYellow:active {
+    -webkit-box-shadow: 0px 2px 2px 0px #b82 inset, 0px 1px 2px 0px #ccc;
+    -moz-box-shadow: 0px 2px 2px 0px #b82 inset, 0px 1px 2px 0px #ccc;
+    box-shadow: 0px 2px 2px 0px #b82 inset, 0px 1px 2px 0px #ccc;
+}
+
+
+.naviBlue{
+    display: inline-block;
+  background-color: #056598;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+cursor: pointer;
+    padding: 6px 20px;
+    border-color: #056598;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'open sans' Arial;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    font-style: normal;
+}
+.naviBlue:hover {
+    color: #ffffff;
+}
+.naviBlue:active {
+    background-color: #056598;
+
+}

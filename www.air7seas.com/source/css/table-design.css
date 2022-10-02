@@ -1,0 +1,35 @@
+/*  Blue Table */
+table.blue {
+    border: 1px solid #4bacc6;
+}
+
+table.blue tr td {
+    padding: 1px 15px;
+    margin: 0;
+    border-bottom: 1px solid #4bacc6;
+}
+.colBG{
+    background-color: #f2f8fa;
+}
+
+table.blue tr:last-child td {
+    border-bottom: 0;
+}
+
+/*  Green Table */
+table.green {
+    border: 1px solid #9bbb59;
+}
+
+table.green tr td {
+    padding: 1px 15px;
+    margin: 0;
+    border-bottom: 1px solid #9bbb59;
+}
+.greenBG{
+    background-color: #f4f9ea;
+}
+
+table.green tr:last-child td {
+    border-bottom: 0;
+}

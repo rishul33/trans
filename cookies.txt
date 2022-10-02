@@ -1,0 +1,8 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.air7seas.com	TRUE	/	FALSE	1999999999	PHPSESSID	50dd4ea17240e78f145d651675561efa
+.bing.com	TRUE	/	FALSE	1999999999	MUID	3C900A91AF3562D624C518A0AEAE6306
+bat.bing.com	TRUE	/	FALSE	1999999999	Priority	High
+bat.bing.com	TRUE	/	FALSE	1999999999	MR	0
+bat.bing.com	TRUE	/	FALSE	1999999999	SameSite	None
+
